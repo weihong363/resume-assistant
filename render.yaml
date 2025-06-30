@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: resume-assistant
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install poetry && poetry install"
+    startCommand: "gunicorn -b 0.0.0.0:8000 -w 2 app.main:app"
+    envVars:
+      - key: PORT
+        value: "8000"
+      - key: ENVIRONMENT
+        value: production
+    runtime: 3.13.5
