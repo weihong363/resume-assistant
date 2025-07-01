@@ -1,10 +1,6 @@
 from fastapi import FastAPI
-from app.routes.example import router as example_router
 
-app = FastAPI(title="My Backend API")
+from app.routes import api_router
 
-@app.get("/")
-def read_root():
-    return {"message": "Backend is running!"}
-
-app.include_router(example_router)
+app = FastAPI()
+app.include_router(api_router)

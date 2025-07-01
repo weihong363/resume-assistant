@@ -29,3 +29,11 @@ build/
 .env
 *.toml
 *.lock
+.idea/misc.xml
+.gitignore
+.idea/modules.xml
+.gitignore
+.gitignore
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/resume-assistant.iml
